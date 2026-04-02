@@ -447,7 +447,7 @@
     <div class="stat-lbl">Max Output Voltage</div>
   </div>
   <div class="stat-item">
-    <div class="stat-num">5A</div>
+    <div class="stat-num">15A</div>
     <div class="stat-lbl">Max Output Current</div>
   </div>
   <div class="stat-item">
@@ -518,14 +518,14 @@
     </thead>
     <tbody>
       <tr><td>Output Voltage</td><td>0 – 30 V (adjustable)</td></tr>
-      <tr><td>Output Current</td><td>0 – 5 A (adjustable)</td></tr>
+      <tr><td>Output Current</td><td>0 – 15 A (adjustable)</td></tr>
       <tr><td>Microcontroller</td><td>ESP32 (Xtensa LX6 dual-core, 240 MHz)</td></tr>
-      <tr><td>Display</td><td>128×64 OLED (I²C, SSD1306)</td></tr>
+      <tr><td>Display</td><td>128×64 OLED (SPI)</td></tr>
       <tr><td>Input Interface</td><td>Rotary encoder + push button</td></tr>
       <tr><td>Serial Interface</td><td>USB-UART (115200 baud)</td></tr>
       <tr><td>Activation Method</td><td>Web Serial API or manual serial command</td></tr>
       <tr><td>Licence Security</td><td>HMAC-SHA256 (chip-ID bound)</td></tr>
-      <tr><td>NVS Storage</td><td>Key + status stored in ESP32 NVS flash</td></tr>
+      <tr><td>Activation Storage</td><td>Secure on-device persistent storage</td></tr>
       <tr><td>Firmware</td><td>Arduino / PlatformIO</td></tr>
       <tr><td>Serial Number Format</td><td>SMBP-V1-NNN</td></tr>
     </tbody>
