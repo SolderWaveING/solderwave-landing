@@ -442,9 +442,24 @@
 
 <!-- ── Product image ── -->
 <div style="width:100%; max-width:900px; margin:0 auto 0; padding:0 24px;">
-  <img src="product.jpg" alt="SolderWave SMBP V1 — PCB Art Impression"
-       style="width:100%; border-radius:14px; border:1px solid #2e2e2e;
-              display:block; box-shadow:0 8px 48px rgba(0,0,0,0.7);" />
+  <div style="position:relative; display:inline-block; width:100%;">
+    <img src="product.jpg" alt="SolderWave SMBP V1 — PCB Art Impression"
+         style="width:100%; border-radius:14px; border:1px solid #2e2e2e;
+                display:block; box-shadow:0 8px 48px rgba(0,0,0,0.7);" />
+    <!-- Watermark logo overlay -->
+    <div style="position:absolute; bottom:18px; right:22px;
+                display:flex; align-items:center; gap:8px;
+                background:rgba(0,0,0,0.45); border-radius:8px;
+                padding:7px 14px; backdrop-filter:blur(4px);
+                border:1px solid rgba(240,165,0,0.25); pointer-events:none; user-select:none;">
+      <img src="solderwave_logo.png" alt=""
+           style="width:24px; height:24px; object-fit:contain; opacity:0.85;" />
+      <span style="color:rgba(240,165,0,0.85); font-size:0.78rem;
+                   font-weight:700; letter-spacing:0.08em; font-family:'Segoe UI',sans-serif;">
+        SolderWave
+      </span>
+    </div>
+  </div>
   <p style="text-align:center; color:#555; font-size:0.75rem; margin-top:8px; font-style:italic;">
     Art impression — SMBP V1 PCB with copper heatsink and toroidal inductors
   </p>
@@ -592,6 +607,33 @@
   </div>
 </div>
 
+<!-- ── Legal ── -->
+<section id="legal" style="background:#0a0a0a; border-top:1px solid var(--border); padding:60px 24px;">
+  <div style="max-width:860px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:48px; flex-wrap:wrap;">
+
+    <div>
+      <p class="section-label">Terms of Sale</p>
+      <p style="color:var(--muted); font-size:0.85rem; line-height:1.8;">
+        All activation key purchases are <strong style="color:var(--text)">final and non-refundable</strong> once the key has been delivered and activated on a device.<br><br>
+        Each licence key is bound to a single device (chip ID). It cannot be transferred to another device.<br><br>
+        SolderWave reserves the right to revoke a licence in case of fraudulent purchase or misuse.<br><br>
+        Support is provided via email at <a href="mailto:support@solderwave.ing" style="color:var(--accent)">support@solderwave.ing</a> and is included with every purchase.
+      </p>
+    </div>
+
+    <div>
+      <p class="section-label">Privacy Policy</p>
+      <p style="color:var(--muted); font-size:0.85rem; line-height:1.8;">
+        When you purchase a licence, we collect your <strong style="color:var(--text)">name, email address, chip ID, and IP address</strong> solely to process your order and deliver your key.<br><br>
+        We do not sell or share your data with third parties. Your data is stored securely in our order database.<br><br>
+        Email communications are limited to order confirmation, key delivery, and support responses.<br><br>
+        For data removal requests, contact <a href="mailto:support@solderwave.ing" style="color:var(--accent)">support@solderwave.ing</a>.
+      </p>
+    </div>
+
+  </div>
+</section>
+
 <!-- ── Footer ── -->
 <footer>
   <div class="footer-inner">
@@ -608,13 +650,13 @@
     <div class="footer-links">
       <h4>Support</h4>
       <a href="https://activate.solderwave.ing">Activation Portal</a>
-      <a href="https://activate.solderwave.ing/?tab=support">Submit a Ticket</a>
+      <a href="https://activate.solderwave.ing#tab-support" onclick="window.open('https://activate.solderwave.ing','_blank'); return false;">Submit a Ticket</a>
       <a href="mailto:support@solderwave.ing">support@solderwave.ing</a>
     </div>
     <div class="footer-links">
       <h4>Legal</h4>
-      <a href="#">Terms of Sale</a>
-      <a href="#">Privacy Policy</a>
+      <a href="#legal">Terms of Sale</a>
+      <a href="#legal">Privacy Policy</a>
     </div>
   </div>
   <div class="footer-bottom">
